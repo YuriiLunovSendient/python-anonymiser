@@ -1,0 +1,29 @@
+# Python / uv
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Downloaded at first run (variant 1 face model)
+variant1_local_ml/models/
+
+# Generated samples and outputs (recreate with: uv run samples/make_samples.py)
+samples/input/
+samples/output/
+
+# Never commit real documents or their anonymised copies
+*.anonymised.*
+out/
+input/
+output/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+*.swp

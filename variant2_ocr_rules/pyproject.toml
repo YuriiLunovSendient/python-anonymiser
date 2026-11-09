@@ -1,0 +1,23 @@
+[project]
+name = "anonymiser-rules"
+version = "0.1.0"
+description = "Variant 2: local OCR (Tesseract) + rule-based detection. No NER, no cloud."
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "pymupdf>=1.24.10",
+    "pillow>=10.4",
+    "pytesseract>=0.3.13",
+    "opencv-python-headless>=4.10,<5",
+    "numpy>=1.26",
+    "phonenumbers>=8.13",
+]
+
+[project.scripts]
+anonymise = "anonymiser_rules.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["anonymiser_rules"]
